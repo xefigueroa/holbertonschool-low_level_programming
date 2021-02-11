@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	unsigned long v = 0, w = 0, tempSum = 0;
+	unsigned long v = 0, w = 1, tempSum = 0;
 	float evenSum;
 
 	while (1)
