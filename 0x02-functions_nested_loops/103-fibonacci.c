@@ -9,7 +9,7 @@
 int main(void)
 {
 	unsigned long v = 0, w = 0, tempSum = 0;
-	float evenSum = 0;
+	float evenSum;
 
 	while (1)
 	{
