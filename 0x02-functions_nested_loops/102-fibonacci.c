@@ -1,38 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible combinations of two two-digit numbers.
+ * main - prints first 50 fibonacci nums.
  *
- * Return: always 0
+ * Return: always 0 (Success)
  */
 
 int main(void)
 {
-	int v, w;
+	int i;
+	unsigned long v = 0, w = 1, fSum;
 
-	v = 0;
-
-	for (; v < 99; v++)
+	for (i = 0; i < 50; i++)
 	{
-		for (w = v + 1; w <= 99; w++)
-		{
-			if (v < w)
-			{
-				putchar (v / 10 + 48);
-				putchar (v % 10 + 48);
-				putchar (' ');
-				putchar (w / 10 + 48);
-				putchar (w % 10 + 48);
-				if (v != 98)
-				{
-					putchar (',');
-					putchar (' ');
-				}
+		fSum = v + w;
+		printf("%lu", fSum);
+		v = w;
+		w = fSum;
 
-			}
+		if (i == 49)
+		{
+			printf("\n");
+		}
+		else
+		{
+			printf(", ");
 		}
 	}
-	putchar('\n');
 	return (0);
 }
 

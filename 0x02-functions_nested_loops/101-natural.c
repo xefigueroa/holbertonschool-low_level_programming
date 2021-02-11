@@ -1,31 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible different combinations of two digits.
+ * main - prints multiples of 3 or 5 below (less than) 1024
  *
- * Return: always 0.
+ * Return: always 0 (Success)
  */
 
 int main(void)
 {
 	int v, w;
 
-	for (v = 0; v < 9; v++)
+	for (v = 0; v < 1024; v++)
 	{
-		for (w = v + 1; w < 10; w++)
+		if ((v % 3) == 0 || (v % 5) == 0)
 		{
-			putchar((v % 10) + '0');
-			putchar((w % 10) + '0');
-
-			if (v == 8 && w == 9)
-				continue;
-
-			putchar(',');
-			putchar(' ');
+			w = w + v;
 		}
 	}
 
-	putchar('\n');
+	printf("%d\n", w);
 
 	return (0);
 }
