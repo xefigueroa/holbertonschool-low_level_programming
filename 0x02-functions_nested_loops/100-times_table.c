@@ -1,32 +1,69 @@
-#include <stdio.h>
+#include "holberton.h"
+
+void table_calc(int z);
 
 /**
- * main - prints all possible different combinations of two digits.
+ * print_times_table- prints times table starting with 0.
+ * @n: limit for multiplication table
  *
- * Return: always 0.
+ * Return: void.
  */
 
-int main(void)
+void print_times_table(int n)
 {
-	int v, w;
+	int x;
+	int y;
+	int z;
 
-	for (v = 0; v < 9; v++)
+	if (n <= 15)
 	{
-		for (w = v + 1; w < 10; w++)
+		for (x = 0; x <= n; x++)
 		{
-			putchar((v % 10) + '0');
-			putchar((w % 10) + '0');
+			_putchar('0');
 
-			if (v == 8 && w == 9)
-				continue;
-
-			putchar(',');
-			putchar(' ');
+			for (y = 1; y <= n; y++)
+			{
+				if (n >= 0 && n <= 15)
+				{
+					z = y * x;
+					table_calc(z);
+				}
+			}
+			_putchar('\n');
 		}
 	}
+}
 
-	putchar('\n');
+/**
+ * table_calc - calculation and print of numbers
+ * @z: product of y and x on previous function.
+ *
+ * Return: void.
+ */
 
-	return (0);
+void table_calc(int z)
+{
+	_putchar(',');
+	_putchar(' ');
+
+	if (z <= 9)
+	{
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(z + '0');
+
+	}
+	else if (z <= 99)
+	{
+		_putchar(' ');
+		_putchar(z / 10 + '0');
+		_putchar(z % 10 + '0');
+	}
+	else if (z <= 999)
+	{
+		_putchar(z / 100 + '0');
+		_putchar((z / 10) % 10 + '0');
+		_putchar(z % 10 + '0');
+	}
 }
 
