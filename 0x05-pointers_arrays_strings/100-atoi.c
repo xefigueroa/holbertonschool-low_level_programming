@@ -13,7 +13,7 @@ int _atoi(char *s)
 	unsigned int num;
 
 	num = 0;
-	w = 0;
+	w = 1;
 
 	do {
 		if (*s == '-')
