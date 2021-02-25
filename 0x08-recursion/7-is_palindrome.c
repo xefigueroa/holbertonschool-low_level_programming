@@ -38,12 +38,10 @@ int palin_check(char *s, int length, int count, int half)
 	{
 		return (0);
 	}
-
 	if (count == half)
 	{
 		return (1);
 	}
-
 	count++;
 	length--;
 	return (palin_check(s, length, count, half));
@@ -71,5 +69,5 @@ int is_palindrome(char *s)
 	length = _strlen(s, length);
 	half = length / 2;
 	length = palin_check(s, length, count, half);
-	return (l);
+	return (length);
 }
