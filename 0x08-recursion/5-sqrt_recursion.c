@@ -20,7 +20,7 @@ int root_finder(int n, int rt)
 	{
 		return (-1);
 	}
-	return (root_finder(n, rt + 1);
+	return (root_finder(n, rt + 1));
 }
 
 /**

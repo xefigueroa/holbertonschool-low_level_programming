@@ -34,7 +34,7 @@ int _strlen(char *s, int l)
 
 int palin_check(char *s, int length, int count, int half)
 {
-	if (s[count] != s[length -1])
+	if (s[count] != s[length - 1])
 	{
 		return (0);
 	}

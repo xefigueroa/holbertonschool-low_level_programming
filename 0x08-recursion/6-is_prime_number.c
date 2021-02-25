@@ -3,7 +3,7 @@
 int prime_checker(int n, int div);
 
 /**
- * prime checker - checks for prime number
+ * prime_checker - checks for prime number
  * @n: number to eval
  * @div: counter for prime
  *
