@@ -18,7 +18,6 @@ int main(__attribute__((unused))int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-	
 	v = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", v);
 	return (0);
