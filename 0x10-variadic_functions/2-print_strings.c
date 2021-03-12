@@ -1,4 +1,4 @@
-#include "vadiadic_functions.h"
+#include "variadic_functions.h"
 
 /**
  * print_strings - print strings followed by a new line
