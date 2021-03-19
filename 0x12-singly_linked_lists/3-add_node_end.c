@@ -15,13 +15,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (str != NULL)
 	{
 		new_ls = malloc(sizeof(list_t));
-		if *new_ls == NULL)
+		if (new_ls == NULL)
 		{
 			return (NULL);
 		}
 
 		new_ls->str = strdup(str);
-		new_ls->len = _strlen(str);
+		new_ls->len = _strlen2(str);
 		new_ls->next = NULL;
 
 		if (*head == NULL)
@@ -42,4 +42,23 @@ list_t *add_node_end(list_t **head, const char *str)
 		}
 	}
 	return (NULL);
+}
+
+/**
+ * _strlen - gives length of string
+ * @s: string
+ *
+ * Return: length
+ */
+
+int _strlen2(const char *s)
+{
+	int v;
+
+	v = 0;
+	while (*s++)
+	{
+		v++;
+	}
+	return (v);
 }
