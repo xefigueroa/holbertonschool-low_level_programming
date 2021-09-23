@@ -2,7 +2,7 @@
 
 /**
   * jump_search - search value in sorted int array using Jump search
-  * @array: pointer to the first element of the array 
+  * @array: pointer to the first element of the array
   * @size: number of elements in array
   * @value: value to search for
   *
